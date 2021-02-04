@@ -14,11 +14,34 @@ $password = [System.Web.Security.Membership]::GeneratePassword(10, 0); ##Method 
 $account = @{
     externalId = $p.ExternalId
     username = $p.Username
-    password = $password
+    password = $password    
+    studentId = $p.ExternalId
     name = @{
-        given = $p.Name.NickName
+        given = $p.Name.GivenName
         family = $p.Name.FamilyName
+        #middle =
+        #other =
+        #suffix =
+        #title =
     }
+    contact = @{
+        email = $p.Contact.Business.Email
+    }
+    job = @{
+        title = $p.Contracts[0].title.name
+        department = $p.Contracts[0].department.displayName
+        company = $p.Contracts[0].organization.name
+    }
+    #location = @{
+    #    street1 = 
+    #    street2 =
+    #    city = 
+    #    state =
+    #    country =
+    #    zipCode =
+    #}
+    #systemRoleIds = @() #Array of system roles as strings to assign to the user
+    #institutionRoleIds = @() #Array of insitution roles as strings to assign to the user
 };
 
 try
