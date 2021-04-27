@@ -11,3 +11,6 @@
  7.	In your Blackboard instance go to System Admin > REST API Integrations on the top you are going to want to click on Create Integration
  8.	On the next page you are going to want to enter in the Application ID you copied from step #6. You will need to select a user that the integration will use, the permissions of the user should be enough so we can perform any actions you need us to perform.
  9.	After you hit Submit you are done the most important items that we will need for the authentication will be the Application Key and Secret which you received from step #5
+
+# HelloID Docs
+The official HelloID documentation can be found at: https://docs.helloid.com/
